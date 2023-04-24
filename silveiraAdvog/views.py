@@ -9,3 +9,11 @@ def my_mess(request):
 def home(request):
     return render(request, 'silveiraAdvog/home.html')
     # return HttpResponse('HOME')
+
+
+def cadastro(request):
+    return render(request, 'silveiraAdvog/cadastro.html')
+
+
+def login(request):
+    return render(request, 'silveiraAdvog/login.html')

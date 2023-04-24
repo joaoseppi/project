@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{% static 'w3-css.css' %}">
 <link href="{% static 'assets/*' %}">
 <head>
-<title>Silveira Advogados</title>
+<title>Cadastro Silveira Advogados</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
@@ -44,51 +44,28 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Georgia", serif}
     <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a> -->
   </div>
 </div>
-
-<!-- Header -->
-<header class="w3-container w3-red w3-center" style="padding:128px 16px">
-  <h1 class="w3-margin w3-jumbo">START PAGE</h1>
-  <p class="w3-xlarge">Template by w3.css</p>
-  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>
-</header>
-
-<!-- First Grid -->
+<!-- ----------------------------------------------------------------- -->
 <div class="w3-row-padding w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
-      <h1>Lorem Ipsum</h1>
-      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
-
-      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-
-    <div class="w3-third w3-center">
-      <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
-    </div>
-  </div>
+	<div class="w3-content">
+		<div class="w3-twothird">
+			<form action="" method="post" name="signupForm">
+			  <label for="name" class="w3-bar-item w3-button w3-padding-large w3-text-gold">Nome:</label>
+			  <input type="text" id="name" name="name"><br><br>
+			  <label for="surname" class="w3-bar-item w3-button w3-padding-large w3-text-gold">Sobrenome:</label>
+			  <input type="text" id="surname" name="surname"><br><br>
+			  <label for="cpf" class="w3-bar-item w3-button w3-padding-large w3-text-gold">CPF:</label>
+			  <input type="text" id="cpf" name="cpf"><br><br>
+			  <label for="mail" class="w3-bar-item w3-button w3-padding-large w3-text-gold">email:</label>
+			  <input type="text" id="mail" name="mail"><br><br>
+			  <label for="password" class="w3-bar-item w3-button w3-padding-large w3-text-gold">Senha:</label>
+			  <input type="password" id="password" name="password"><br><br>
+			  <input type="submit" value="Cadastrar" class="w3-large w3-bar-item w3-button w3-padding-large w3-text-gold w3-bar w3-red w3-card">
+			</form>
+		</div>
+	</div>
 </div>
-
-<!-- Second Grid -->
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-third w3-center">
-      <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
-    </div>
-
-    <div class="w3-twothird">
-      <h1>Lorem Ipsum</h1>
-      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
-
-      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-  </div>
-</div>
-
-<div class="w3-container w3-red w3-center w3-padding-16">
+<!-- ----------------------------------------------------------------- -->
+<div class="w3-container w3-red w3-center w3-padding-32">
     <h1 class="w3-margin w3-xlarge">Nossas redes sociais</h1>
     <div class="w3-xlarge w3-padding-16">
       <a href="https://pt-br.facebook.com/" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
@@ -111,6 +88,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Georgia", serif}
 </footer>
 
 <script>
+  function validateForm() {
+    var name = document.forms["signupForm"]["name"];
+    var surname = document.forms["signupForm"]["surname"];
+    var cpf = document.forms["signupForm"]["cpf"];
+    var mail = document.forms["signInserir CPF, email e senha.upForm"]["mail"];
+    var password = document.forms["signupForm"]["password"];
+    if(cpf == "" || mail == "" || password == "" || surname == "" || name == "") {
+      alert("Preencha todos os campos.");
+      return false;
+    }
+  }
 // Used to toggle the menu on small screens when clicking on the menu button
 function myFunction() {
   var x = document.getElementById("navDemo");

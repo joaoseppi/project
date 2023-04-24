@@ -22,5 +22,7 @@ urlpatterns = [
     path('recipes/admin/', admin.site.urls),
     path('recipes/', include('recipes.urls')),
     path('recipes/recipes/', include('recipes.urls')),
-    path('', include('silveiraAdvog.urls'))
+    path('', include('silveiraAdvog.urls')),
+    path('cadastro/', include('silveiraAdvog.urls')),
+    path('login/', include('silveiraAdvog.urls'))
 ]
