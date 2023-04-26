@@ -1,11 +1,9 @@
 from django.urls import path
 
 
-from silveiraAdvog.views import home, cadastro, login
+from silveiraAdvog.views import home
 
 
 urlpatterns = [
     path('', home),
-    path('cadastro/', cadastro),
-    path('login/', login)
 ]
